@@ -1,12 +1,35 @@
 import java.math.BigDecimal;
+import java.security.PublicKey;
 import java.math.BigInteger;
 import java.util.*;
 
+
 public class Main {
 
-    public static void main(String[] args) {
 
         /* ćw_6 Listy */
+
+        public static void main(String[]args) {
+            System.out.println("Podaj 10 liczb");
+            Scanner in = new Scanner(System.in);
+            Set<Integer>number = new TreeSet<>();
+
+            for (int i = 0; i < 10; i++) {
+                int numbers = in.nextInt();
+                number.add(numbers);
+            }
+
+
+            System.out.println("Liczby: " + number);
+            metoda(number);
+        }
+    public static void metoda (Set <Integer> number) {
+        int i = 0;
+        for (Integer x : number) {
+            System.out.println("Liczba " + (i + 1) + " :" + x);
+            i++;
+        }
+    }
 
         /* zad.1 a) Napisać program który stworzy listę ArrayList<String> (lista tablicowa),
                 Proszę dane wprowadzać z klawiatury (można użyć pętli), lista ma mieć przynajmniej 5
@@ -25,6 +48,7 @@ public class Main {
                  a następnie przeiterować i wyświetlić forEach-em (jak wyżej)
          */
 
-    }
-
 }
+
+
+
